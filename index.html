@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Express Form Pattern</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.form.io/formiojs/formio.full.min.css"
+    />
+    <link href="./css/uk-gov.css" />
+    <style>
+      html {
+        font-size: 100% !important;
+      }
+      .main-wrapper {
+        max-width: 1100px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
+    <script src="./js/formio.full.min.js"></script>
+    <script src="./js/gds.js"></script>
+  </head>
+  <body>
+    <div id="formio" class="main-wrapper"></div>
+
+    <script type="text/javascript">
+      window.onload = function () {
+        Formio.use(gds);
+        Formio.createForm(
+          document.getElementById("formio"),
+          "https://yypazmutfiibvyu.form.io/businessconnectpattern"
+        );
+      };
+    </script>
+  </body>
+</html>
